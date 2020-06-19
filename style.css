@@ -1,0 +1,23 @@
+:root {
+    --cell-size: 16px;
+}
+
+#matrix > * {
+    height: var(--cell-size);
+}
+
+#matrix > * > * {
+    height: var(--cell-size);
+    width: var(--cell-size);
+    border: 1px solid;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#matrix > * > *.brick {
+    background-color: blue;
+}
+
+#matrix > * > *.shadow:not(.brick) {
+    background-color: #00f7;
+}
